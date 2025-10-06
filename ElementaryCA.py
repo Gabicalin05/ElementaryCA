@@ -11,7 +11,7 @@ def rules(left, current, right):
     bits = []
 
     for bit in [left, current, right]:
-        if bit == "1":
+        if bit == "A":
             bits.append("1")
         else:
             bits.append("0")
@@ -25,7 +25,7 @@ def rules(left, current, right):
 # generation 0
 n_cells = 101
 generation = [" "] * n_cells
-generation[n_cells // 2] = "1"
+generation[n_cells // 2] = "A"
 
 rule_select = int(input("Choose a rule from 0 to 255: "))
 
@@ -35,7 +35,7 @@ conversion = format(rule_select, "08b")
 ruleset = []
 for bit in conversion:
     if bit == "1":
-        ruleset.append("1")
+        ruleset.append("A")
     else:
         ruleset.append(" ")
 
