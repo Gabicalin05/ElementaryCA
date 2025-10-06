@@ -1,4 +1,3 @@
-ruleset = []
 count = 0
 
 def draw(vector):
@@ -33,6 +32,7 @@ rule_select = int(input("Choose a rule from 0 to 255: "))
 # convert to binary
 conversion = format(rule_select, "08b")
 
+ruleset = []
 for bit in conversion:
     if bit == "1":
         ruleset.append("1")
